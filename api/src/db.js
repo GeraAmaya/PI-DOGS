@@ -14,7 +14,7 @@ const sequelize = new Sequelize(
   }
 );
 
-console.log(API_KEY);
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
