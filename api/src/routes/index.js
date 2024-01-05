@@ -1,14 +1,17 @@
+const getDogById = require ('../controllers/getDogById');
+const getDogByName = require('../controllers/getDogByName');
+const postDog = require('../controllers/postDog');
+const getTemperaments = require('../controllers/getTemperaments');
 const { Router } = require('express');
-const dogsRoutes = require('./routesDogs.js');
-const temperamentsRoutes = require('./routesTemperaments.js');
-
-
 const router = Router();
 
-// Configurar los routers
 
-router.use('/dogs', dogsRoutes);
-router.use('/temperaments', temperamentsRoutes);
+
+router.get ("/dogs", getDogByName);
+router.get ( "/dogs/:id", getDogById);
+router.post ( "/dogs", postDog);
+router.get ( "/temperaments", getTemperaments);
+
 
 
 module.exports = router;

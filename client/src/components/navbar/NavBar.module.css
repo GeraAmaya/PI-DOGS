@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+    background-image: url(../../../img/Fondo_nav3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: auto;
+    height: 300px;
+    justify-content: space-evenly;
+    padding: 5px;
+    
+   
+
+}
+
+
+.containerItems{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 250px;
+    margin-right: 30px;
+   justify-content: space-evenly;
+}
+
+.link{
+    text-decoration: none;
+    color: aliceblue;
+    margin: 0;
+ 
+}
+
+
+.containerSelect{
+   display: flex;
+    width: 700px;
+    height: 40px;
+    margin-top: 250px;
+    margin-left: 50px;
+     padding: 5px;
+    gap: 5px;
+}
+
+
+.containerSearch{
+  display: flex;
+    margin-top: 250px;
+    margin-left: 350px;
+    height: 50px;
+    justify-content: space-evenly;
+  }
+
+.selectFilters{
+    background-color: rgb(36, 36, 36);
+    border-radius: 10px;
+    color: whitesmoke;
+    font-weight: bolder;
+  
+
+}
+
+
+
+.beautifulButton {
+
+    background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
+   /* Gradient background */
+    color: white;
+   /* White text color */
+    font-family: "Segoe UI", sans-serif;
+   /* Stylish and legible font */
+    font-weight: bold;
+    font-size: 15px;
+   /* Large font size */
+    border: none;
+   /* No border */
+    border-radius: 30px;
+   /* Rounded corners */
+    padding: 10px;
+   /* Large padding */
+    cursor: pointer;
+   /* Cursor on hover */
+    box-shadow: 0 5px 15px rgba(12, 12, 12, 0.075);
+   /* Subtle shadow */
+    animation: button-shimmer 2s infinite;
+    transition: all 0.3s ease-in-out;
+   /* Smooth transition */
+  }
+  
+  /* Hover animation */
+  .beautifulButton:hover {
+    background: linear-gradient(to bottom, #2c2f63, #5b67b7);
+    animation: button-particles 1s ease-in-out infinite;
+    transform: translateY(-2px);
+  }
+  
+  /* Click animation */
+  .beautifulButton:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Shimmer animation */
+  @keyframes button-shimmer {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }
+  
+  /* Particle animation */
+  @keyframes button-particles {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }

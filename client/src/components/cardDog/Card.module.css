@@ -1,0 +1,49 @@
+img{
+    width:17vw;
+    height:17vw;
+    border-radius: 30px;
+    opacity: 0.7;
+}
+
+.divCar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.089);
+    border: 1px solid rgba(163, 234, 255, 0.438);
+    border-radius: 15px;
+    padding: 25px;
+    cursor: pointer;
+    -moz-osx-smoothing: graysacle;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    /* align-items: center; */
+
+}
+
+.divCar:hover{
+    transform: scale(1.05);
+}
+.divh3{
+    margin-top: 1em;
+    text-align: center;
+    background-color: rgba(163, 234, 255, 0.205);
+}
+
+.h3Card{
+    margin: 3px;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: monospace;
+}
+.titulos{
+    color: whitesmoke;
+    margin-bottom: 2px;
+    margin-top: 0;
+}
+
+.linkCard{
+    margin-top: 1.5em;
+    text-align: center;
+    color: rgb(0, 191, 255);
+    font-size:18px;
+}

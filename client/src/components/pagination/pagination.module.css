@@ -1,0 +1,21 @@
+.buttonPage{
+    width: fit-content;
+    height: fit-content;
+    font-size: x-small;
+    margin: 2px;
+    background-color: rgba(0, 191, 255, 0.315);
+}
+.buttonPage:hover{
+    border-color:  rgb(50, 231, 255);
+}
+
+.divPage{
+    margin-top: 6em;
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    justify-content: center;
+}
