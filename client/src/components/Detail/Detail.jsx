@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import style from './Detail.module.css';
 import { getDetail, getClean  } from '../../redux/actions';
 import { Link } from 'react-router-dom';
+import Header from '../header/header';
+import HeaderDetail from '../header/HeaderDetail';
 
 
 
@@ -24,17 +26,20 @@ const Detail = () => {
 
    
     return (
+        <>
+        <HeaderDetail/>
+
         <div className={style.container}>
             <div className={style.info} >
-                <h3>{detail?.name} </h3>
-                <h5>Temperaments: {detail?.temperament}</h5>
-                <h5>Weight Min: {detail?.weightMin} KG</h5>
-                <h5>Weight Max: {detail?.weightMax} KG</h5>
-                <h5>Height: {detail?.height} CM</h5>
-                <h5>Life span: {detail?.life_span}</h5>
-                <h5>Id:{id}</h5>
+                <h1 className={style.h1} >{detail?.name} </h1>
+                <h3>Temperaments: {detail?.temperament}</h3>
+                <h3>Weight Min: {detail?.weightMin} KG</h3>
+                <h3>Weight Max: {detail?.weightMax} KG</h3>
+                <h3>Height: {detail?.height} CM</h3>
+                <h3>Life span: {detail?.life_span}</h3>
+                <h4>Id:{id}</h4>
               
-               <button className={style.beautifulButton} ><Link className={style.link} to='/home' > Home</Link></button> 
+
                     
                
             </div>
@@ -43,6 +48,7 @@ const Detail = () => {
             </div>
           
         </div>
+        </>
     )
 }
 

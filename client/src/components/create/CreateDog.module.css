@@ -1,7 +1,10 @@
+
 .divContForm{
     display: flex;
     flex-direction: row;
-    width: 90vw;
+    width: auto;
+    background-color: black;
+    color: aliceblue;
 }
 
 .divForm{
@@ -29,25 +32,25 @@
     margin-left: 5vw;
     margin-top: 20px;
     text-align: center;
-    /* height: fit-content; */
+
 }
 .divTemps{
     padding-bottom: .5em;
     margin-top: 1em;
     margin-bottom: 1em;
-    /* background-color:  rgba(250, 227, 198, 0.519); */
+    
 }
 .options{
     display: flex;
     flex-direction: row;
-    color:  rgb(0, 191, 255);
+    color:  rgb(248, 249, 250);
     width: 350px;
     font-size:smaller;
     margin-top: 1.5em;
 }
 
 .input1{
-    background-color: rgba(255, 255, 255, 0.281);
+    background-color: rgba(248, 248, 248, 0.911);
     width: 25vw;
     height: 1.5vw;
     color: black;
@@ -55,7 +58,7 @@
 
 .h2Form{
     margin-top: 0;
-    color: rgb(0, 191, 255);
+    color: rgb(255, 255, 255);
     font-weight: 800;
     font-size: 200%;
     text-align: center;
@@ -68,18 +71,32 @@ p{
     margin-top: 0;
     font-size: 95%;
 }
+
+.label{
+    color: bisque;
+}
+
+
+
+
+
+
 .linkRetForm{
-    background-color:  rgb(59, 59, 59);
+    display: flex;
+    background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
+    color: rgb(253, 252, 252);
     width: 5em;
     height: 2em;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 5px;
+    padding-top: 15px;
     font-size: larger;
-    text-align: center;
+   text-decoration: none;
+    justify-content: center;
     margin-left: 2vw;
     /* margin-right: 0; */
     font-weight: 900;
-    margin-top: 1em;
+    margin-top: 5em;
     
 }
 

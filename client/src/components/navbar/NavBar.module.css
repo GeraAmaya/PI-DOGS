@@ -7,10 +7,7 @@
     height: 300px;
     justify-content: space-evenly;
     padding: 5px;
-    
-   
-
-}
+    }
 
 
 .containerItems{
@@ -18,7 +15,7 @@
     flex-direction: column;
     width: 100px;
     height: 250px;
-    margin-right: 30px;
+    margin-right: 50px;
    justify-content: space-evenly;
 }
 

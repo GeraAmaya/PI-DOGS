@@ -6,10 +6,11 @@ import style from './Card.module.css';
 const Card = ({ id, image, name, height, weightMin, weightMax, temperament, life_span }) =>{
     return (
         <div className={style.divCar}>
-            <img src={image}  />
-            <Link to={`/detail/${id}`} className={style.linkCard}>
-                <h3 className={style.h3Card}>{name}</h3> 
-            </Link>
+            
+           <Link to={`/detail/${id}`} className={style.linkCard}> <img src={image}  /></Link>
+            
+                <h2 className={style.h2}>{name}</h2> 
+            
             <div className={style.divh3}>
                 <h3 className={style.titulos}>Min.Weight:</h3>
                 <h3 className={style.h3Card}>{weightMin} Kg</h3>
