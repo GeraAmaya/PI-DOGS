@@ -1,33 +1,44 @@
 import React from "react";
 import style from './pagination.module.css';
 
+function Pagination({ allDogs, pagination, dogsPage, currentPage }) {
+  const totalPages = Math.ceil(allDogs / dogsPage);
+  const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
-function Pagination({allDogs, pagination, dogsPage}){
-    
-    const pageNumbers =[];
+  return (
+    <div className={style.container}>
+      <div className={style.divPage}>
+        <button
+          className={style.buttonPage1}
+          onClick={() => pagination(1)}
+          disabled={currentPage === 1}
+        >
+          FIRST
+        </button>
 
-    for(let i = 1; i <= Math.ceil(allDogs/dogsPage); i++){  /* Para saber el numero de paginas que debe crear */
-        pageNumbers.push(i)
-    }
+        {pageNumbers?.map((pageNumber) => (
+          <div key={pageNumber}>
+            <button
+              className={style.buttonPage}
+              onClick={() => pagination(pageNumber)}
+            >
+              {pageNumber}
+            </button>
+          </div>
+        ))}
 
-    return(
-        <div>
-            <div className={style.divPage}>
-                {
-                    pageNumbers?.map((pageNumber) => {  /* recorre el pageNumber y crea un boton por pagina */
-                        return(
-                            <div  key={pageNumber}>
-                                <button className={style.buttonPage} onClick={() => pagination(pageNumber)}>{pageNumber}</button>
-                                       {/* pagination es la funcion pasada por parametro desde alllCards */}
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        </div>
-    )
-
+        <button
+          className={style.buttonPage1}
+          onClick={() => pagination(totalPages)}
+          disabled={currentPage === totalPages}
+        >
+          LAST
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default Pagination;
+
 

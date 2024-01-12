@@ -16,13 +16,13 @@ body{
 
 
 .containerButton{
+  display: flex;
+  background-color: blueviolet;
     display: flex;
-   
-    height: 80px;
+    height: 90px;
     width: 200px;
-    margin-top: 350px;
-
-margin-left: 180px;
+    margin-top: 450px;
+    margin-left: -200px;
 
 
 }
@@ -86,4 +86,13 @@ margin-left: 180px;
     border: none;
   }
 
- 
+  .textContain{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: aqua;
+    width: 480px;
+    height:300px;
+    margin-top: 50px;
+    margin-left: 150px;
+  }

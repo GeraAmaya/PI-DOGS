@@ -11,7 +11,7 @@ const validationInputs = (state, name, errors) => {
         } else { errors.image = "" }
     }
 
-    // Validar el namej
+    // Validar el name
     if (name === 'name') {
         if (state.name === "" || !/^(?!\s+$).+/.test(state.name)) {
             errors.name = "The field is required"

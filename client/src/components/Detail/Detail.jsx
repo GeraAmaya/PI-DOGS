@@ -4,8 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from "react-router-dom";
 import style from './Detail.module.css';
 import { getDetail, getClean  } from '../../redux/actions';
-import { Link } from 'react-router-dom';
-import Header from '../header/header';
 import HeaderDetail from '../header/HeaderDetail';
 
 
@@ -20,10 +18,18 @@ const Detail = () => {
     const detail = useSelector((state) => state.dogDetail) /* me subscribo al subestado dogDetail */
     const { id } = useParams();
 
-    useEffect(() => {
-        dispatch(getDetail(id))
-        }, [id])
+   // useEffect(() => {
+   //     dispatch(getDetail(id))
+   //     }, [id])
 
+   
+   useEffect(() => {
+    dispatch(getDetail(id))
+
+    return () => {
+        dispatch(getClean()); /* Al desmontar el componente se despacha getClean para limpiar el estado dogDetail */
+    }
+}, [id])
    
     return (
         <>

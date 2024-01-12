@@ -2,9 +2,14 @@ import React from "react";
 import style from '../ladingPage/Landing.module.css';
 
 
+
 const Landing = () => {
 return (
     <div className={style.container}>
+
+        <div className={style.textContain}>
+       
+        </div>
 
         <div className={style.containerButton}>
         <button className={style.button} >

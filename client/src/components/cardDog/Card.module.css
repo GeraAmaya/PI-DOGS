@@ -24,6 +24,7 @@ img{
 
 .divCar:hover{
     transform: scale(1.05);
+    background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
 }
 
 .h2{
