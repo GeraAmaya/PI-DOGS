@@ -1,4 +1,4 @@
-import {  GET_DOG_TEMPS,POST_DOG, GET_ALL, GET_BY_NAME, GET_DETAIL, GET_TEMPERAMENTS, GET_CLEAN, FILTER_ORIGIN, FILTER_TEMPERAMENTS, ORDER_BY_NAME, ORDER_BY_WEIGHT, DELETE_DOG_SUCCESS, DELETE_DOG_FAILURE } from './actionTypes';
+import {  GET_DOG_TEMPS,POST_DOG, GET_ALL, GET_BY_NAME, GET_DETAIL, GET_TEMPERAMENTS, GET_CLEAN, FILTER_ORIGIN, FILTER_TEMPERAMENTS, ORDER_BY_NAME, ORDER_BY_WEIGHT, DELETE_DOG_SUCCESS, DELETE_DOG_FAILURE, SET_NAME } from './actionTypes';
 
 
 
@@ -6,7 +6,8 @@ const initialState = {
     allDogs: [],
     dogFilter: [],
     dogDetail: [],
-    temperaments: []
+    temperaments: [],
+    userName: [],
 }
 
 function reducer(state = initialState, action) {
@@ -134,6 +135,13 @@ function reducer(state = initialState, action) {
                 // Manejar el error de eliminación si es necesario
                 console.error(`Error al eliminar el perro: ${action.payload}`
                 );
+
+        case SET_NAME:
+                    return {
+                      ...state,
+                      userName: action.payload,
+                    };
+
                 default:
             return { ...state };
           };   

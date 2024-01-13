@@ -8,6 +8,8 @@ import { orderByName, orderByWeight, filterOrigin, filterTemperament } from '../
 
 const Nav = ({ handleChange, handleSubmit, handleClick }) => {  /* VIENEN DESDE HOME */
 
+
+
   const dispatch = useDispatch();
   const temperaments = useSelector((state) => state.temperaments)
 
@@ -35,6 +37,7 @@ const Nav = ({ handleChange, handleSubmit, handleClick }) => {  /* VIENEN DESDE 
 
   return (
     <div className={style.container}>
+
 
 <div className={style.containerSearch} >
       <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} handleClick={handleClick} />

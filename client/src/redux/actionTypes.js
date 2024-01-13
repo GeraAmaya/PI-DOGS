@@ -11,3 +11,4 @@ export const POST_DOG = 'POST_DOG';
 export const GET_DOG_TEMPS = 'GET_DOG_TEMPS';
 export const DELETE_DOG_SUCCESS = 'DELETE_DOG_SUCCESS';
 export const DELETE_DOG_FAILURE = 'DELETE_DOG_FAILURE';
+export const SET_NAME = 'SET_NAME';

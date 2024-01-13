@@ -2,7 +2,7 @@
 const validationInputs = (state, name, errors) => {
 
 
-    // Validar la imagen
+    // Valido la imagen
     if (name === 'image') {
         if (state.image === "") {
             errors.image = "The field is required"
@@ -11,7 +11,7 @@ const validationInputs = (state, name, errors) => {
         } else { errors.image = "" }
     }
 
-    // Validar el name
+    // Valido el name
     if (name === 'name') {
         if (state.name === "" || !/^(?!\s+$).+/.test(state.name)) {
             errors.name = "The field is required"
@@ -22,7 +22,7 @@ const validationInputs = (state, name, errors) => {
         } else { errors.name = "" }
     }
 
-    // Validar heightMin  && heightMax
+    // Valido heightMin  && heightMax
     if (name === 'heightMin' || name === 'heightMax') {
         const heightMin = parseInt(state.heightMin, 10); // Convertir a número entero
         const heightMax = parseInt(state.heightMax, 10); // Convertir a número entero
@@ -50,7 +50,7 @@ const validationInputs = (state, name, errors) => {
         }
     }
     
-    // Validar weightMin  && Validar weightMax
+    // Valido weightMin  && Validar weightMax
 
     if (name === 'weightMin' || name === 'weightMax') {
         const weightMin = parseInt(state.weightMin, 10); // Convertir a número entero
@@ -79,7 +79,7 @@ const validationInputs = (state, name, errors) => {
         }
     }
 
-    // Validar life_span
+    // Valido life_span
     if (name === 'life_span') {
         if (state.life_span === "") {
             errors.life_span = "The field is required"

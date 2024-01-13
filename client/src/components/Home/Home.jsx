@@ -11,6 +11,8 @@ import { getDogs, getByName, getTemperaments } from '../../redux/actions';
 
 function Home() {
 
+    const userName = useSelector((state) => state.userName);
+
     const dispatch = useDispatch();
     const [searchString, setSearchString] = useState('');  /* estado local para el string */
     const allDogs = useSelector(state => state.dogFilter);
@@ -50,6 +52,12 @@ function Home() {
     return (
         <div className={style.container}>
             <NavBar handleChange={handleChange} handleSubmit={handleSubmit} handleClick={handleClick} />
+                
+                <div className={style.bienvenida}>
+      <h1>Welcome {userName}!, This is our collection of dogs: </h1>
+
+    </div>
+            
             <AllCards allDogs={allDogs} />
         </div>
     )

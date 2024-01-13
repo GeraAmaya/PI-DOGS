@@ -1,5 +1,15 @@
-import {GET_DOG_TEMPS, GET_ALL, GET_BY_NAME,GET_DETAIL,GET_CLEAN,GET_TEMPERAMENTS,FILTER_ORIGIN,FILTER_TEMPERAMENTS,ORDER_BY_NAME, ORDER_BY_WEIGHT, POST_DOG,DELETE_DOG_FAILURE,DELETE_DOG_SUCCESS} from './actionTypes';
+import {GET_DOG_TEMPS, GET_ALL, GET_BY_NAME,GET_DETAIL,GET_CLEAN,GET_TEMPERAMENTS,FILTER_ORIGIN,FILTER_TEMPERAMENTS,ORDER_BY_NAME, ORDER_BY_WEIGHT, POST_DOG,DELETE_DOG_FAILURE,DELETE_DOG_SUCCESS, SET_NAME} from './actionTypes';
 import axios from 'axios';
+
+
+
+export const setUserName = (name) => {
+    return {
+      type: SET_NAME,
+      payload: name,
+    };
+  };
+  
 
 
 export const getDogs = () => {
