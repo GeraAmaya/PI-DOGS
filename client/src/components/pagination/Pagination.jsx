@@ -1,7 +1,7 @@
 import React from "react";
 import style from './pagination.module.css';
 
-function Pagination({ allDogs, pagination, dogsPage, currentPage }) {
+const  Pagination = ({ allDogs, pagination, dogsPage, currentPage }) => {
   const totalPages = Math.ceil(allDogs / dogsPage);
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 

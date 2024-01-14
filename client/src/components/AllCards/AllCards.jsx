@@ -1,10 +1,10 @@
 
 import { useState } from 'react';
-import Card from '../cardDog/Card'; //Se importa Card para utilizarala de plantilla para las demas cards
+import Card from '../CardDog/Card'; 
 import style from './AllCards.module.css';
-import Pagination from '../pagination/Pagination';
+import Pagination from '../Pagination/Pagination';
 
-export default function Cards({ allDogs }) {
+const Cards = ({ allDogs }) => {
 
    const [currentPage, setCurrentPage] = useState(
       window.localStorage.getItem('currentPage'));
@@ -59,3 +59,4 @@ return (
 )
 }
 
+export default Cards;

@@ -1,8 +1,8 @@
-import SearchBar from '../search/SearchBar';
+import SearchBar from '../Search/SearchBar';
 import { Link } from 'react-router-dom';
 import style from './NavBar.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { orderByName, orderByWeight, filterOrigin, filterTemperament } from '../../redux/actions';
+import { orderByName, orderByWeight, filterOrigin, filterTemperament } from '../../Redux/actions';
 
 
 

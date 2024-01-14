@@ -1,15 +1,15 @@
 import React from 'react';
-import style from '../home/Home.module.css';
+import style from './Home.module.css';
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import AllCards from '../AllCards/AllCards';
-import NavBar from '../navbar/NavBar';
-import { getDogs, getByName, getTemperaments } from '../../redux/actions';
+import NavBar from '../Navbar/NavBar';
+import { getDogs, getByName, getTemperaments } from '../../Redux/actions';
 
 
 
 
-function Home() {
+const Home = () => {
 
     const userName = useSelector((state) => state.userName);
 

@@ -3,8 +3,11 @@ import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from "react-router-dom";
 import style from './Detail.module.css';
-import { getDetail, getClean  } from '../../redux/actions';
-import HeaderDetail from '../header/HeaderDetail';
+import { getDetail, getClean  } from '../../Redux/actions';
+import HeaderDetail from '../Header/HeaderDetail';
+import Loading from '../Loader/Loading';
+
+
 
 
 
@@ -14,9 +17,10 @@ import HeaderDetail from '../header/HeaderDetail';
 const Detail = () => {
 
     const dispatch = useDispatch();
-    
     const detail = useSelector((state) => state.dogDetail) /* me subscribo al subestado dogDetail */
     const { id } = useParams();
+    const [loading , setLoading] = useState();
+   
 
    // useEffect(() => {
    //     dispatch(getDetail(id))
@@ -24,18 +28,32 @@ const Detail = () => {
 
    
    useEffect(() => {
+    setLoading(true);
     dispatch(getDetail(id))
-
     return () => {
-        dispatch(getClean()); /* Al desmontar el componente se despacha getClean para limpiar el estado dogDetail */
+        dispatch(getClean());
+        setTimeout(() => {
+            setLoading(false)    
+        }, 2100);
+        
     }
 }, [id])
+
+
    
-    return (
-        <>
-        <HeaderDetail/>
+return (
+    <>
+        <HeaderDetail/> 
+        
 
         <div className={style.container}>
+    { loading ?
+
+        <Loading/>
+    :
+
+       
+            <div className={style.cardDetail}>
             <div className={style.info} >
                 <h1 className={style.h1} >{detail?.name} </h1>
                 <h3>Temperaments: {detail?.temperament}</h3>
@@ -43,16 +61,18 @@ const Detail = () => {
                 <h3>Weight Max: {detail?.weightMax} KG</h3>
                 <h3>Height: {detail?.height} CM</h3>
                 <h3>Life span: {detail?.life_span}</h3>
-                <h4>Id:{id}</h4>
+                <h3>Id:{id}</h3>
               
-
+                
                     
                
             </div>
             <div className={style.containerImg} >
                 <img className={style.imgDetail} src={detail?.image} alt={detail?.name} />
             </div>
-          
+
+            </div>
+}
         </div>
         </>
     )

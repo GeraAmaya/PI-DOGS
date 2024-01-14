@@ -1,4 +1,3 @@
-// Sirve que se pase el nombre para que no salten todos los errores en las inputs a la vez si no solo del input que se esta modificando con ese name.
 const validationInputs = (state, name, errors) => {
 
 
@@ -91,7 +90,7 @@ const validationInputs = (state, name, errors) => {
             errors.life_span = "Life span must be an integer";
         } else { errors.life_span = "" }
     }
-
+    // valido el temperamento
     if (name === 'temperament') {
         if (state.temperament.length === 0) {
             errors.temperament = "You must select at least one temperament"

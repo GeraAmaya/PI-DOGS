@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import style from './CreateDog.module.css';
 import { useState, useEffect } from 'react';
-import validate from '../validation/validationInputs';
-import validateSubmit from '../validation/validationSubmit';
-import { getDogs, postDog, getTemperaments } from '../../redux/actions';
+import validate from '../Validation/validationInputs';
+import validateSubmit from '../Validation/validationSubmit';
+import { getDogs, postDog, getTemperaments } from '../../Redux/actions';
 import { Link } from 'react-router-dom';
-import Header from '../header/header';
+import Header from '../Header/header';
 
 
 const CreateDog = () => {

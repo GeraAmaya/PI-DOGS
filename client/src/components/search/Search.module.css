@@ -1,16 +1,30 @@
 .container{
     display: flex;
-    height: 50px;
-    width: 300px;
+
+  margin-top: 10px;
+    height: 90px;
+    width: 350px;
     
 }
 
+.containerButton{
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  width: 200px;
+  margin-top: -39px;
+margin-left: 150px;
+
+}
+
 .input{
+  
     height: 2.9em;
-    width: 10em;
+    width: 12em;
+    justify-content: space-between;
     border-radius: 10px;
     background-color: rgba(245, 243, 228, 0.665);
-    border-color: blanchedalmond;
+    
     color: black;
     padding: 10px;
 }
@@ -22,6 +36,7 @@
 }
 
 .buttonAll{
+  flex-wrap: wrap;
     margin-right: 1em;
     border-radius: 5px;
     padding-top: 0.4em;

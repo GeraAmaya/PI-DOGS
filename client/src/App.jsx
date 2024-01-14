@@ -7,7 +7,7 @@ import Landing from './components/ladingPage/Landing'
 
 
 
-function App() {
+const App = ()=> {
 
 
 

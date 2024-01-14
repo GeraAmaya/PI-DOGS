@@ -1,6 +1,6 @@
 
-export const validateName = (value) => {
-    // Agrega tu lógica de validación aquí
+const ValidateName = (value) => {
+  
     if (value === "") {
       return "The field is required";
     } else if (!/^[A-Za-z\s]+$/.test(value)) {
@@ -11,4 +11,7 @@ export const validateName = (value) => {
       return ""; // Sin errores
     }
   };
+
+
+  export default ValidateName;
   

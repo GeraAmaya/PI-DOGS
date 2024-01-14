@@ -1,4 +1,4 @@
-import {  GET_DOG_TEMPS,POST_DOG, GET_ALL, GET_BY_NAME, GET_DETAIL, GET_TEMPERAMENTS, GET_CLEAN, FILTER_ORIGIN, FILTER_TEMPERAMENTS, ORDER_BY_NAME, ORDER_BY_WEIGHT, DELETE_DOG_SUCCESS, DELETE_DOG_FAILURE, SET_NAME } from './actionTypes';
+import {  GET_DOG_TEMPS,POST_DOG, GET_ALL, GET_BY_NAME, GET_DETAIL, GET_TEMPERAMENTS, GET_CLEAN, FILTER_ORIGIN, FILTER_TEMPERAMENTS, ORDER_BY_NAME, ORDER_BY_WEIGHT, DELETE_DOG_SUCCESS, DELETE_DOG_FAILURE, SET_NAME } from '../Redux/actionTypes';
 
 
 
@@ -126,15 +126,7 @@ function reducer(state = initialState, action) {
                 dogDetail: action.payload,
             };
 
-        case DELETE_DOG_SUCCESS:
-                return {
-                  ...state,
-                  dogs: state.dogs.filter((dog) => dog.id !== action.payload),
-                };
-        case DELETE_DOG_FAILURE:
-                // Manejar el error de eliminación si es necesario
-                console.error(`Error al eliminar el perro: ${action.payload}`
-                );
+    
 
         case SET_NAME:
                     return {

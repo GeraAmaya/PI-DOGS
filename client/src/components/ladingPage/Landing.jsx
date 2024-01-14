@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';  // Asegúrate de importar useDispatch
-import { setUserName } from '../../redux/actions'; 
+import { setUserName } from '../../Redux/actions'; 
 import { useNavigate } from 'react-router-dom';
 
-import style from '../ladingPage/Landing.module.css';
+import style from './Landing.module.css';
 
 
 
