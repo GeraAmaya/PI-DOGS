@@ -30,7 +30,7 @@ return (
             currentDogs?.map(({ id, image, name, height, weightMin, weightMax, temperament, life_span }) => { 
                return ( 
                   <Card
-                     key={id} //Para uso interno de React para identificar cada Card
+                     key={id} 
                      id={id}
                      image={image}
                      name={name}

@@ -6,7 +6,7 @@ import { orderByName, orderByWeight, filterOrigin, filterTemperament } from '../
 
 
 
-const Nav = ({ handleChange, handleSubmit, handleClick }) => {  /* VIENEN DESDE HOME */
+const Nav = ({ handleChange, handleSubmit, handleClick }) => {  
 
 
 

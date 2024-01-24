@@ -8,7 +8,7 @@ const ValidateName = (value) => {
     } else if (value.length > 25) {
       return "Name too long";
     } else {
-      return ""; // Sin errores
+      return ""; 
     }
   };
 

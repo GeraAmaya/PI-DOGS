@@ -14,7 +14,7 @@ const Home = () => {
     const userName = useSelector((state) => state.userName);
 
     const dispatch = useDispatch();
-    const [searchString, setSearchString] = useState('');  /* estado local para el string */
+    const [searchString, setSearchString] = useState('');  
     const allDogs = useSelector(state => state.dogFilter);
 
 
@@ -26,7 +26,7 @@ const Home = () => {
         }
     }, [dispatch])
 
-    // ---------------------------------TRAER RAZAS POR NOMBRE ------------------------------------------------------------
+ 
 
     function handleChange(event) {   
         event.preventDefault();
@@ -38,7 +38,7 @@ const Home = () => {
         dispatch(getByName(searchString));
     }
 
-    // -------------------------------VOLVER A OBTENER TODOS LOS  PERROS---------------------------------------------------
+  
     function handleClick(event) {
         event.preventDefault();
         dispatch(getDogs());

@@ -21,7 +21,7 @@ const validationInputs = (state, name, errors) => {
         } else { errors.name = "" }
     }
 
-    // Valido heightMin  && heightMax
+    // Valido heightMin -- heightMax
     if (name === 'heightMin' || name === 'heightMax') {
         const heightMin = parseInt(state.heightMin, 10); // Convertir a número entero
         const heightMax = parseInt(state.heightMax, 10); // Convertir a número entero
@@ -49,7 +49,7 @@ const validationInputs = (state, name, errors) => {
         }
     }
     
-    // Valido weightMin  && Validar weightMax
+    // Valido weightMin -- Valido weightMax
 
     if (name === 'weightMin' || name === 'weightMax') {
         const weightMin = parseInt(state.weightMin, 10); // Convertir a número entero

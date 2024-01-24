@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';  // Asegúrate de importar useDispatch
+import { useDispatch } from 'react-redux';  
 import { setUserName } from '../../Redux/actions'; 
 import { useNavigate } from 'react-router-dom';
-
 import style from './Landing.module.css';
 
 
 
 const Landing = () => {
-    const [name, setName] = useState(''); 
+  const [name, setName] = useState(''); 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -27,7 +26,6 @@ return (
     <h1>MY APP DOGS</h1>
  <h4 className={style.h4}>- PI HENRY -</h4>
 </div>
-
 
 
 

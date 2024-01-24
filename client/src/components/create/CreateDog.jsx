@@ -14,7 +14,8 @@ const CreateDog = () => {
     const allTemperaments = useSelector(state => state.temperaments);
     const dispatch = useDispatch();
     
-    // crear un estado local para guardar las respuestas
+    
+
     const [state, setState] = useState({
         image: "",
         name: "",
@@ -41,22 +42,22 @@ const CreateDog = () => {
     const handleChange = (event) => {
         event.preventDefault();
         
-        // Para modificar los sub-estados segun corresponda menos temperaments
+
         setState({
             ...state,
             [event.target.name]: event.target.value
         })
 
-        // Para agregar varios elementos al array(state) de temperaments
+  
         if (event.target.name === "temperament") {
-            if (state.temperament.includes(event.target.value)) return;  /* para que no agregar temperamentos repetidos al perro */
+            if (state.temperament.includes(event.target.value)) return;  
             setState({
                 ...state,
                 [event.target.name]: [...state[event.target.name], event.target.value]
             })
         }
 
-        setErrors(validate({ /*cada que se haga una modificación se valide lo que se escriba */
+        setErrors(validate({
             ...state,
             [event.target.name]: event.target.value
         }, event.target.name, errors))
@@ -75,7 +76,7 @@ const CreateDog = () => {
     }, event.target.name, errors))
     }
 
-    // Para el botón de Posteo
+    
     const handleSubmit =(event) =>{
         event.preventDefault();
         dispatch(postDog(state))

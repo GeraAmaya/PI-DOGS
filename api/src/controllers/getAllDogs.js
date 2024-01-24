@@ -6,8 +6,8 @@ const URL = "https://api.thedogapi.com/v1/breeds/";
 
 async function getAllDogsApi() {
 
-    // petición a la API 
-    const { data } = await axios(`${URL}?api_key=${API_KEY}`);
+   const { data } = await axios(`${URL}?api_key=${API_KEY}`);
+
 
         let dogsApi = data.map((dog) => {
             return {
@@ -50,7 +50,7 @@ async function getAllDogsDb() {
                 createInDb: dog.createInDb,
             }
         })
-        // console.log(dogsDb);
+        
         return dogsDb;
 
 }
@@ -71,7 +71,6 @@ const getAllDogs = async () =>{
     }
 }
 
-// Los controladores manejan toda la logica de las rutas
 
 module.exports = {
 getAllDogs,

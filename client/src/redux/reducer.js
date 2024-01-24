@@ -11,7 +11,7 @@ const initialState = {
 }
 
 function reducer(state = initialState, action) {
-    let aux; // Array auxiliar para guardar los perros filtrados
+    let aux; 
 
 
     switch (action.type) {
@@ -40,7 +40,7 @@ function reducer(state = initialState, action) {
         case ORDER_BY_NAME:
 
               const sortedDogFilter1 = [...state.dogFilter].sort((a, b) => {
-                const nameA = a.name?.toLowerCase() || ""; // Manejar valores nulos o indefinidos
+                const nameA = a.name?.toLowerCase() || ""; 
                 const nameB = b.name?.toLowerCase() || "";
             
                 // si devuelve 1 el primer elemento (a) debería ir después del segundo elemento (b) en el ordenamiento.
@@ -59,23 +59,23 @@ function reducer(state = initialState, action) {
         case ORDER_BY_WEIGHT:
             const { payload } = action;
 
-            const compareFunctionMin = (a, b) => {/*  para ordenar los valores mínimos de forma ascendente */
+            const compareFunctionMin = (a, b) => {
                 if (a.weightMin < b.weightMin) return -1;
                 if (a.weightMin > b.weightMin) return 1;
                 return 0;
             };
 
-            const compareFunctionMax = (a, b) => { /* para ordenar los valores máximos de forma descendente. */
+            const compareFunctionMax = (a, b) => { 
                 if (a.weightMax > b.weightMax) return -1;
                 if (a.weightMax < b.weightMax) return 1;
                 return 0;
             };
 
-            // utilizamos filter para separar los obj en dos arrays diferentes: uno contiene los objetos para cuando payload es "min" y otro para cuando payload es "max" (ambos contienen lo mismo solo se separan para ordenarlos independientemente). utilizan las funciones de comparación compareFunctionMin y compareFunctionMax para ordenar los elementos respectivamente 
+            
             let sortedMin = [...state.dogFilter.filter(item => payload === "min")].sort(compareFunctionMin);
             let sortedMax = [...state.dogFilter.filter(item => payload === "max")].sort(compareFunctionMax);
 
-            // concatenamos los dos arreglos ordenados (sortedMin y sortedMax) en un solo arreglo llamado sortedDogFilter
+           
             const sortedDogFilter = sortedMin.concat(sortedMax);
 
             return {

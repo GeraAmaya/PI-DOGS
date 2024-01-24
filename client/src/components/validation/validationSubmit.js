@@ -1,7 +1,6 @@
 const validateSubmit = (errors, state) =>{
     let disableAux = true;
-
-    // Recorrer el estado de errores
+    
     for(let error in errors){
         if(errors[error] === "") disableAux =false;
         else{
@@ -10,7 +9,7 @@ const validateSubmit = (errors, state) =>{
         }
     }
 
-    // Recorrer el state de inputs
+
     for (let input in state) {
         if (input === "temperament" && state[input].length === 0) {
           disableAux = true;

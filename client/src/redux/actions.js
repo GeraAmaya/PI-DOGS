@@ -102,12 +102,13 @@ export const postDog =(createDog) =>{
     }
 }
 
+
+
+
+
+
 /// CON ESTA ACCION MANEJO LA ELIMINACION DE LA CARD CREADA Y LOS ERRORES, TANTO SI SALE BIEN
 /// COMO SI SALE MAL
-
-
-
-
 
 export const deleteDog = (id) => async (dispatch) => {
   try {
